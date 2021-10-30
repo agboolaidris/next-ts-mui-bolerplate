@@ -5,7 +5,7 @@
     "lint": "next lint",
     "build": "next build",
     "start": "next start",
-    "test": "jest --watch",
+    "test": "jest --watch --env=jsdom",
     "test:ci": "jest --ci"
   },
   "dependencies": {
