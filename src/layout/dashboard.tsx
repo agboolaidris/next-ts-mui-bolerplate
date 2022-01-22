@@ -1,16 +1,19 @@
 import React, { ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { Theme } from '@mui/material/styles';
-import { Box, Grid } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import Toobar from '../components/dashboardLayout/toolbar';
 interface StyleProps {
-  primary?: string;
-  theme: Theme;
+  theme?: Theme;
 }
 
+const MyContext = styled.div``;
 const Wrapper = styled(Box)<StyleProps>`
-  background: ${({ theme }) => theme.palette.primary.main};
-  padding: 20px;
+  background: ${({ theme }) => theme.palette.grey[300]};
+  min-height: 100vh;
+  ${MyContext} {
+    background-color: yellow;
+  }
 `;
 
 interface Props {
@@ -19,17 +22,13 @@ interface Props {
 
 function Dashboard({ children }: Props) {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Wrapper>
       <Toobar />
-      <Grid container sx={{ pb: '50px' }}>
-        <Grid item lg={4}>
-          HHHHH
-        </Grid>
-        <Grid item lg={8}>
-          XL
-        </Grid>
-      </Grid>
-    </Box>
+      <Container>
+        {children}
+        <MyContext>I Love React/Next</MyContext>
+      </Container>
+    </Wrapper>
   );
 }
 

@@ -1,12 +1,12 @@
-import React from "react";
-import { AppBar, Toolbar as Bar } from "@mui/material";
+import React from 'react';
+import { AppBar, Toolbar } from '@mui/material';
 
-function Toolbar() {
+function Index() {
   return (
     <AppBar position="sticky">
-      <Bar>Hello</Bar>
+      <Toolbar>Welcome</Toolbar>
     </AppBar>
   );
 }
 
-export default Toolbar;
+export default Index;
