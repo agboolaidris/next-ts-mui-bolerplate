@@ -4,6 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 import styled from '@emotion/styled';
 import Header from '../ui/molecules/navbar';
 import { getColor } from '../assets/thems/color';
+import Cursor from '../ui/molecules/cursor';
 
 //import "./styles.css";
 interface Props {
@@ -11,29 +12,35 @@ interface Props {
 }
 
 const Wrap = styled(Box)<{ theme?: Theme }>`
+  cursor: none;
+
   background: ${getColor('black')};
   color: white;
   padding: 1px 0px;
   height: 100vh;
 
-  cursor: url('https://github.com/chenglou/react-motion/raw/master/demos/demo8-draggable-list/cursor.png')
-      39 39,
-    auto;
   a {
     font-size: 1em;
     text-decoration: none;
     color: ${getColor('white')};
+  }
+
+  .cursor {
+    position: fixed;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
   }
 `;
 
 function Example({ children }: Props) {
   return (
     <Wrap>
-      <Container>
-        <Header />
+      <Cursor />
+      <Header />
 
-        {children}
-      </Container>
+      {children}
     </Wrap>
   );
 }

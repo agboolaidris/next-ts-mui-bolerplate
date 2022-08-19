@@ -47,12 +47,12 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     position: fixed;
     width: 100%;
     z-index: 40;
-    background: ${getColor('danger')};
+    background: ${getColor('black')};
     left: 0;
     top: 60px;
     flex-direction: column;
     padding-inline-start: 0px;
-    height: max-content;
+    height: 100vh;
     padding: 20px 0px;
     transform: translatex(-100%);
     transition: all 0.3s ease-in-out;
@@ -68,8 +68,12 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
       .underline {
         display: none;
       }
+      a {
+        font-size: 20px;
+        font-style: bolder;
+      }
       &.active-link {
-        background: ${getColor('black')};
+        background: ${getColor('danger')};
         a {
           color: ${getColor('black')};
         }

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Head from 'next/head';
+//import AnimatedCursor from 'react-animated-cursor';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
