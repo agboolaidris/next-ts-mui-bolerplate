@@ -11,14 +11,13 @@ interface Props {
 }
 
 const Wrap = styled(Box)<{ theme?: Theme }>`
+  cursor: none;
+
   background: ${getColor('black')};
   color: white;
   padding: 1px 0px;
   height: 100vh;
 
-  cursor: url('https://github.com/chenglou/react-motion/raw/master/demos/demo8-draggable-list/cursor.png')
-      39 39,
-    auto;
   a {
     font-size: 1em;
     text-decoration: none;
@@ -29,11 +28,10 @@ const Wrap = styled(Box)<{ theme?: Theme }>`
 function Example({ children }: Props) {
   return (
     <Wrap>
-      <Container>
-        <Header />
+      {/* <Cursor /> */}
+      <Header />
 
-        {children}
-      </Container>
+      {children}
     </Wrap>
   );
 }
