@@ -1,24 +1,24 @@
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import { getColor } from '../../../assets/thems/color';
+import { Theme } from '@mui/material';
 
-const Light = keyframes`
-  0%,
-  80% {
-    color:${getColor('white')};
-    text-shadow: none;
-  }
-  100% {
-    color: ${getColor('white')};
-      text-shadow: -0.06em 0 ${getColor('danger')}, 0.06em 0 ${getColor(
-  'white'
-)};
-  }
+const Light = (theme?: Theme) =>
+  keyframes`
+    0%,
+    80% {
+      color: ${theme?.colors.white};
+      text-shadow: none;
+    }
+    100% {
+      color: ${theme?.colors.white};
+      text-shadow: -0.06em 0 ${theme?.colors.danger},
+        0.06em 0 ${theme?.colors.white};
+    }
 
 `;
 
-export const LightText = styled.span<{ delay?: number }>`
-  animation: ${Light} 1s linear infinite;
+export const LightText = styled.span<{ delay?: number; theme?: Theme }>`
+  animation: ${({ theme }) => Light(theme)} 1s linear infinite;
 `;
 export const TextStyled = styled.div`
   font-size: 6em;

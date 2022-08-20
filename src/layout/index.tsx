@@ -3,7 +3,6 @@ import { Box, Container, Theme } from '@mui/material';
 import { CSSTransition } from 'react-transition-group';
 import styled from '@emotion/styled';
 import Header from '../ui/molecules/navbar';
-import { getColor } from '../assets/thems/color';
 
 //import "./styles.css";
 interface Props {
@@ -13,7 +12,7 @@ interface Props {
 const Wrap = styled(Box)<{ theme?: Theme }>`
   cursor: none;
 
-  background: ${getColor('black')};
+  background: ${({ theme }) => theme.colors.black};
   color: white;
   padding: 1px 0px;
   height: 100vh;
@@ -21,7 +20,7 @@ const Wrap = styled(Box)<{ theme?: Theme }>`
   a {
     font-size: 1em;
     text-decoration: none;
-    color: ${getColor('white')};
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
