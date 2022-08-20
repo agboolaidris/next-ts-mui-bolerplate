@@ -4,7 +4,6 @@ import { CSSTransition } from 'react-transition-group';
 import styled from '@emotion/styled';
 import Header from '../ui/molecules/navbar';
 import { getColor } from '../assets/thems/color';
-import Cursor from '../ui/molecules/cursor';
 
 //import "./styles.css";
 interface Props {
@@ -24,20 +23,12 @@ const Wrap = styled(Box)<{ theme?: Theme }>`
     text-decoration: none;
     color: ${getColor('white')};
   }
-
-  .cursor {
-    position: fixed;
-    background-color: red;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-  }
 `;
 
 function Example({ children }: Props) {
   return (
     <Wrap>
-      <Cursor />
+      {/* <Cursor /> */}
       <Header />
 
       {children}
