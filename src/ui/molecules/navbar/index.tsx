@@ -32,8 +32,9 @@ function Header() {
         {openMobileDrawer ? <TimesIcon /> : <BarIcon />}
       </Harmburger>
       <NavBar open={openMobileDrawer}>
-        <CustomLink href="/">Home</CustomLink>
         <CustomLink href="/about">About</CustomLink>
+        <CustomLink href="/resume">Resumé</CustomLink>
+        <CustomLink href="/contact">Contact</CustomLink>
       </NavBar>
     </HeaderStyled>
   );
