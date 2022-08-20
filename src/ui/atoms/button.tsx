@@ -1,20 +1,20 @@
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { ButtonUnstyled } from '@mui/base';
-import { getColor } from '../../assets/thems/color';
+import { Theme } from '@mui/material';
 
-export const Button = styled(ButtonUnstyled)`
-  background-color: ${getColor('white')};
+export const Button = styled(ButtonUnstyled)<{ theme?: Theme }>`
+  background-color: ${({ theme }) => theme.colors.white};
 `;
 
-export const LinkButton = styled.span`
+export const LinkButton = styled.span<{ theme?: Theme }>`
   padding: 5px 10px;
   border-radius: 5px;
   transition: all 0.3s ease-out;
-  color: ${getColor('danger')};
+  color: ${({ theme }) => theme.colors.danger};
   &:hover {
-    background-color: ${getColor('danger')};
-    color: ${getColor('black')};
+    background-color: ${({ theme }) => theme.colors.danger};
+    color: ${({ theme }) => theme.colors.black};
   }
 `;
 const Moving = keyframes`

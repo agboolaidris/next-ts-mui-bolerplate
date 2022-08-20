@@ -7,7 +7,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import theme from '../assets/theme';
 import createEmotionCache from '../lib/createEmotionCache';
-import { getColor } from '../assets/thems/color';
 import StoreProvider from '../store';
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -23,6 +22,7 @@ const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
   return (
     <StoreProvider>
       <CacheProvider value={emotionCache}>
@@ -34,7 +34,7 @@ export default function MyApp(props: MyAppProps) {
           outerSize={15}
           outerAlpha={0.2}
           innerScale={0.7}
-          color={getColor('cursor')}
+          color={'179,0,73'}
           clickables={[
             'a',
             'input[type="text"]',
@@ -49,7 +49,6 @@ export default function MyApp(props: MyAppProps) {
             '.link',
           ]}
         />
-
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />

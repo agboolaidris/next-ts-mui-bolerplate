@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import { Box, Theme } from '@mui/material';
-import { getColor } from '../../../assets/thems/color';
 
 export const HeaderStyled = styled(Box)<{ theme?: Theme }>`
   height: 70px;
@@ -27,18 +26,18 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     a {
       display: block;
       &:hover {
-        color: ${getColor('danger')};
+        color: ${({ theme }) => theme.colors.danger};
       }
     }
     transition: all 2s ease-in-out;
     &.active-link {
       a {
-        color: ${getColor('danger')};
+        color: ${({ theme }) => theme.colors.danger};
       }
       .underline {
         width: 100%;
         height: 1px;
-        background: ${getColor('danger')};
+        background: ${({ theme }) => theme.colors.danger};
       }
     }
   }
@@ -47,7 +46,7 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     position: fixed;
     width: 100%;
     z-index: 40;
-    background: ${getColor('black')};
+    background: ${({ theme }) => theme.colors.black};
     left: 0;
     top: 60px;
     flex-direction: column;
@@ -73,9 +72,9 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
         font-style: bolder;
       }
       &.active-link {
-        background: ${getColor('danger')};
+        background: ${({ theme }) => theme.colors.danger};
         a {
-          color: ${getColor('black')};
+          color: ${({ theme }) => theme.colors.black};
         }
       }
     }
