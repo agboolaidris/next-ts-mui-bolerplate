@@ -31,3 +31,12 @@ export const AnimationIconWrapper = styled.div`
   animation: ${Moving} 1.5s linear infinite;
   transition: all 0.4s ease-in-out;
 `;
+
+export const IconWrapper = styled.div<{ theme?: Theme }>`
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    svg {
+      transform: scale(1.2);
+    }
+  }
+`;
