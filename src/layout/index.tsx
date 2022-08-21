@@ -15,7 +15,7 @@ const Wrap = styled(Box)<{ theme?: Theme }>`
   background: ${({ theme }) => theme.colors.black};
   color: white;
   padding: 1px 0px;
-  height: 100vh;
+  min-height: 100vh;
 
   a {
     font-size: 1em;

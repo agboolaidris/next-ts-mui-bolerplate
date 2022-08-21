@@ -14,9 +14,10 @@ export const LinkButton = styled.span<{ theme?: Theme }>`
   color: ${({ theme }) => theme.colors.danger};
   &:hover {
     background-color: ${({ theme }) => theme.colors.danger};
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
+
 const Moving = keyframes`
 0%{
   transform:translateX(10px);
