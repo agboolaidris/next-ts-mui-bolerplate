@@ -12,6 +12,8 @@ import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 import ShareIcon from '@mui/icons-material/Share';
 import SocialShare from '../ui/molecules/socialShare';
+import LearnMore from '../ui/molecules/learnMore';
+import SocailMedia from '../ui/molecules/socailMedia';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
@@ -96,6 +98,8 @@ function Resume() {
             </Stack>
           </ResumeWrapper>
         </FullScreen>
+        <LearnMore text="Learn More About Me" />
+        <SocailMedia sx={{ marginY: 4 }} />
       </Container>
     </Layout>
   );
