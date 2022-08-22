@@ -14,6 +14,8 @@ import {
   WhatsappShareButton,
 } from 'react-share';
 import { Stack } from '@mui/system';
+import { SocialIconWrapper } from './style';
+import { FacebookRounded, Twitter } from '@mui/icons-material';
 
 const BootstrapDialog = styled(Dialog)<{ theme?: Theme }>`
   color: ${({ theme }) => theme.colors.white} !important;
@@ -35,6 +37,7 @@ interface Props {
   handleClose: () => void;
 }
 export default function SocialShare({ open, handleClose }: Props) {
+  const url = '/resume';
   return (
     <BootstrapDialog
       onClose={handleClose}
@@ -63,10 +66,23 @@ export default function SocialShare({ open, handleClose }: Props) {
         <Typography gutterBottom>
           Aenean lacinia bibendum nulla sed consectetur. Praesent commodo.
         </Typography>
-        <Stack>
-          <TwitterShareButton url="/resume" hashtags={['dev']}>
-            kk
+        <Stack
+          direction="row"
+          spacing={2}
+          justifyContent="center"
+          alignItems="center"
+          sx={{ marginTop: 4 }}
+        >
+          <TwitterShareButton url={url} hashtags={['dev']}>
+            <SocialIconWrapper>
+              <Twitter />
+            </SocialIconWrapper>
           </TwitterShareButton>
+          <FacebookShareButton url={url}>
+            <SocialIconWrapper>
+              <FacebookRounded />
+            </SocialIconWrapper>
+          </FacebookShareButton>
         </Stack>
       </DialogContent>
     </BootstrapDialog>

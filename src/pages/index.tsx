@@ -1,17 +1,14 @@
 import * as React from 'react';
 import type { NextPage } from 'next';
 import { Container, Typography, Stack } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Layout from '../layout';
 import TextAnimated from '../ui/molecules/textAnimated';
 import { ShowTypography } from '../ui/atoms/shadowText';
 import Link from '../ui/molecules/Link';
-import {
-  AnimationIconWrapper,
-  LinkButton,
-  IconWrapper,
-} from '../ui/atoms/button';
+import { LinkButton, IconWrapper } from '../ui/atoms/button';
 import { FacebookRounded, Twitter } from '@mui/icons-material';
+import LearnMore from '../ui/molecules/learnMore';
+import SocailMedia from '../ui/molecules/socailMedia';
 
 const Home: NextPage = () => {
   return (
@@ -31,31 +28,8 @@ const Home: NextPage = () => {
           </Link>
           , Contact Me, or send me an email at agboolaisholaidreez@gmail.com.
         </Typography>
-        <Link href="/">
-          <Stack
-            direction="row"
-            alignItems="center"
-            spacing={2}
-            sx={{ marginTop: { xs: 1, md: 4 } }}
-          >
-            <p>Know More About Me</p>
-            <AnimationIconWrapper>
-              <ArrowForwardIcon />
-            </AnimationIconWrapper>
-          </Stack>
-        </Link>
-        <Stack direction="row" spacing={2} sx={{ marginTop: { xs: 2, md: 4 } }}>
-          <Link href="/">
-            <IconWrapper>
-              <FacebookRounded />
-            </IconWrapper>
-          </Link>
-          <Link href="/">
-            <IconWrapper>
-              <Twitter />
-            </IconWrapper>
-          </Link>
-        </Stack>
+        <LearnMore text="Learn More About Me" />
+        <SocailMedia />
       </Container>
       <TextAnimated text={'IRIS WELCOME YOU'} />
     </Layout>
