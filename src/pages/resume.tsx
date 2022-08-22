@@ -10,20 +10,46 @@ import SystemUpdateAltOutlinedIcon from '@mui/icons-material/SystemUpdateAltOutl
 import FullscreenOutlinedIcon from '@mui/icons-material/FullscreenOutlined';
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
+import ShareIcon from '@mui/icons-material/Share';
+import SocialShare from '../ui/molecules/socialShare';
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function Resume() {
-  const [numPages, setNumPages] = useState(null);
+  const [numPages, setNumPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
+  const [open, setOpen] = useState(false);
   const handle = useFullScreenHandle();
 
   function onDocumentLoadSuccess({ numPages }: any) {
     setNumPages(numPages);
   }
+  const handlePrevPage = () => {
+    if (pageNumber === 1) {
+      setPageNumber(numPages);
+    } else {
+      setPageNumber((prev) => prev - 1);
+    }
+  };
+  const handleNextPage = () => {
+    if (numPages === pageNumber) {
+      setPageNumber(1);
+    } else {
+      setPageNumber((prev) => prev + 1);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setOpen(false);
+  };
+  const handleOpenModal = () => {
+    setOpen(true);
+  };
 
   return (
     <Layout>
       <Container sx={{ marginTop: { xs: 4, md: 10 } }}>
+        <SocialShare handleClose={handleCloseModal} open={open} />
         <Typography variant="h3">Resumé.</Typography>
         <Typography sx={{ marginY: 4 }}>
           Lorem ipsum dolor sit amet,
@@ -44,22 +70,25 @@ function Resume() {
               sx={{ paddingX: 2 }}
             >
               <Stack direction="row" spacing={2}>
-                <IconWrapper>
+                <IconWrapper onClick={handlePrevPage}>
                   <ArrowBackOutlinedIcon />
                 </IconWrapper>
                 <span>
                   {pageNumber} of {numPages}
                 </span>
-                <IconWrapper>
+                <IconWrapper onClick={handleNextPage}>
                   <ArrowForwardOutlinedIcon />
                 </IconWrapper>
               </Stack>
-              <Stack direction="row" spacing={1}>
-                <a download href="resume.pdf">
+              <Stack direction="row" spacing={2}>
+                {/* <a download href="resume.pdf">
                   <IconWrapper>
                     <SystemUpdateAltOutlinedIcon />
                   </IconWrapper>
-                </a>
+                </a> */}
+                <IconWrapper className="link" onClick={handleOpenModal}>
+                  <ShareIcon />
+                </IconWrapper>
                 <IconWrapper className="link" onClick={handle.enter}>
                   <FullscreenOutlinedIcon />
                 </IconWrapper>
