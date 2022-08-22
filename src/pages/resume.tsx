@@ -3,10 +3,8 @@ import React, { useState } from 'react';
 import Layout from '../layout';
 import { pdfjs, Document, Page } from 'react-pdf';
 import { ResumeWrapper } from '../ui/atoms/resumeWarpper';
-import Link from '../ui/molecules/Link';
 import { FullScreen, useFullScreenHandle } from 'react-full-screen';
 import { IconWrapper, LinkButton } from '../ui/atoms/button';
-import SystemUpdateAltOutlinedIcon from '@mui/icons-material/SystemUpdateAltOutlined';
 import FullscreenOutlinedIcon from '@mui/icons-material/FullscreenOutlined';
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
@@ -51,7 +49,6 @@ function Resume() {
   return (
     <Layout>
       <Container sx={{ marginTop: { xs: 4, md: 10 } }}>
-        <SocialShare handleClose={handleCloseModal} open={open} />
         <Typography variant="h3">Resumé.</Typography>
         <Typography sx={{ marginY: 4 }}>
           Lorem ipsum dolor sit amet,
@@ -101,6 +98,7 @@ function Resume() {
         <LearnMore text="Learn More About Me" />
         <SocailMedia sx={{ marginY: 4 }} />
       </Container>
+      <SocialShare handleClose={handleCloseModal} open={open} />
     </Layout>
   );
 }

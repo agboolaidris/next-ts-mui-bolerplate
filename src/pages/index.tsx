@@ -1,12 +1,11 @@
 import * as React from 'react';
 import type { NextPage } from 'next';
-import { Container, Typography, Stack } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import Layout from '../layout';
 import TextAnimated from '../ui/molecules/textAnimated';
 import { ShowTypography } from '../ui/atoms/shadowText';
 import Link from '../ui/molecules/Link';
-import { LinkButton, IconWrapper } from '../ui/atoms/button';
-import { FacebookRounded, Twitter } from '@mui/icons-material';
+import { LinkButton } from '../ui/atoms/button';
 import LearnMore from '../ui/molecules/learnMore';
 import SocailMedia from '../ui/molecules/socailMedia';
 
