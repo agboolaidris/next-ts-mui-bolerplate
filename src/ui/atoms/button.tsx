@@ -1,10 +1,25 @@
-import { keyframes } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { ButtonUnstyled } from '@mui/base';
 import { Theme } from '@mui/material';
 
-export const Button = styled(ButtonUnstyled)<{ theme?: Theme }>`
+export const Button = styled.button<{
+  theme?: Theme;
+  width?: string;
+  loading: boolean;
+}>`
   background-color: ${({ theme }) => theme.colors.white};
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  width: ${({ width }) => (width ? width : '300px')};
+  outline: none;
+  ${({ loading, theme }) =>
+    loading &&
+    css`
+      background-color: ${theme.colors.white};
+      opacity: 0.5;
+    `}
 `;
 
 export const LinkButton = styled.span<{ theme?: Theme }>`
