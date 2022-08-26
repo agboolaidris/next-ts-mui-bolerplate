@@ -5,6 +5,7 @@ export const colors = {
   cursor: '179,0,73',
   lightBlack: '#231F20 ',
   yellow: '#fff800',
+  darkWhite: '#E1D9D1',
 };
 
 export type ColorsInterface = typeof colors;
