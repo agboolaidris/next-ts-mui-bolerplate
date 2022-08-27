@@ -46,12 +46,8 @@ function About() {
             name="message"
             onChange={handleChange}
           />
-          <Button style={{ marginTop: 20 }} loading={loading}>
-            {!loading ? (
-              'Send Message'
-            ) : (
-              <BarLoader color={theme.colors.black} />
-            )}
+          <Button loading={loading} style={{ marginTop: '20px' }}>
+            loading
           </Button>
         </Box>
         <LearnMore text="Back Home" />
