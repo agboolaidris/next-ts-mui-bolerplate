@@ -22,7 +22,6 @@ export const ShowTypography = styled.h1<{ theme?: Theme }>`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
-  display: inline-block;
   font-size: 4em;
   ${({ theme }) => theme.breakpoints.down('md')} {
     font-size: 2em;

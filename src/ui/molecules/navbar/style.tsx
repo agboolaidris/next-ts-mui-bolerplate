@@ -46,7 +46,7 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     position: fixed;
     width: 100%;
     z-index: 40;
-    background: ${({ theme }) => theme.colors.black};
+    background: ${({ theme }) => theme.colors.white};
     left: 0;
     top: 60px;
     flex-direction: column;
