@@ -17,7 +17,7 @@ export const ShowTypography = styled.h1<{ theme?: Theme }>`
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
