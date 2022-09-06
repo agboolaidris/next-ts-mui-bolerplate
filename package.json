@@ -16,7 +16,6 @@
     "@mui/material": "^5.10.0",
     "next": "@latest",
     "react": "@latest",
-    "react-animated-cursor": "^2.5.1",
     "react-dom": "@latest"
   },
   "devDependencies": {
