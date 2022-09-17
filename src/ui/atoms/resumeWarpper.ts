@@ -1,6 +1,5 @@
-import { css, keyframes } from '@emotion/react';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { ButtonUnstyled } from '@mui/base';
 import { Theme } from '@mui/material';
 
 export const ResumeWrapper = styled.div<{ theme?: Theme; full?: boolean }>`

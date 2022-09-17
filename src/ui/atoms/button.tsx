@@ -23,7 +23,7 @@ const loadingAnimation = keyframes`
   }
 
   75% {
-    width: 50%;
+    width: 100%;
     transform: translateX(0%);
     border-radius: 0 5px 5px 0;
   }
@@ -76,13 +76,13 @@ export const Button = styled.button<{
 `;
 
 export const LinkButton = styled.span<{ theme?: Theme }>`
-  padding: 5px 10px;
+  // padding: 5px;
   border-radius: 5px;
   transition: all 0.3s ease-out;
   color: ${({ theme }) => theme.colors.danger};
   &:hover {
-    background-color: ${({ theme }) => theme.colors.danger};
-    color: ${({ theme }) => theme.colors.white};
+    //  background-color: ${({ theme }) => theme.colors.danger};
+    // color: ${({ theme }) => theme.colors.white};
   }
 `;
 

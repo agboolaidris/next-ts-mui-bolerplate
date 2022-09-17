@@ -22,7 +22,7 @@ function About() {
         <Typography sx={{ marginY: 5 }}>
           Get in touch or shoot me an email directly on
           <Link href="mailto: agboolaisholaidreez@gmail.com">
-            <LinkButton>agboolaisholaidreez@gmail.com</LinkButton>
+            <LinkButton> agboolaisholaidreez@gmail.com</LinkButton>
           </Link>
         </Typography>
         <Box sx={{ width: '600px', maxWidth: '100%' }}>

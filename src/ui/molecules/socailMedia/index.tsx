@@ -28,3 +28,24 @@ function SocailMedia({ sx }: Props) {
 }
 
 export default SocailMedia;
+
+export function SocailMedia2({ sx }: Props) {
+  return (
+    <Stack
+      direction="row"
+      spacing={2}
+      sx={{ marginTop: { xs: 2, md: 4 }, ...sx }}
+    >
+      <Link href="/">
+        <IconWrapper>
+          <FacebookRounded />
+        </IconWrapper>
+      </Link>
+      <Link href="/">
+        <IconWrapper>
+          <Twitter />
+        </IconWrapper>
+      </Link>
+    </Stack>
+  );
+}

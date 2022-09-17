@@ -11,9 +11,10 @@ export const HeaderStyled = styled(Box)<{ theme?: Theme }>`
   align-items: center;
 `;
 
-export const Logo = styled.span`
+export const Logo = styled.a`
   font-size: 1.2rem;
   font-weight: bolder;
+  cursor: pointer;
 `;
 
 export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`

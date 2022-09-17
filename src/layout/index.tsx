@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { Box, Container, Theme } from '@mui/material';
 import styled from '@emotion/styled';
 import Header from '../ui/molecules/navbar';
+import { SocailMedia2 } from '../ui/molecules/socailMedia';
 
 interface Props {
   children: ReactNode;
@@ -25,6 +26,7 @@ function Example({ children }: Props) {
     <Wrap>
       <Header />
       {children}
+      <SocailMedia2 />
     </Wrap>
   );
 }
