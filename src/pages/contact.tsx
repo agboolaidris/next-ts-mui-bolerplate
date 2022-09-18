@@ -17,42 +17,39 @@ function About() {
   const handleChange = () => {};
   return (
     <Layout>
-      <Container sx={{ marginTop: { xs: 4, md: 10 } }}>
-        <Typography variant="h3">Contact.</Typography>
-        <Typography sx={{ marginY: 5 }}>
-          Get in touch or shoot me an email directly on
-          <Link href="mailto: agboolaisholaidreez@gmail.com">
-            <LinkButton> agboolaisholaidreez@gmail.com</LinkButton>
-          </Link>
-        </Typography>
-        <Box sx={{ width: '600px', maxWidth: '100%' }}>
-          <TextInput
-            placeholder="Name"
-            value={state.name}
-            name="name"
-            onChange={handleChange}
-          />
-          <TextInput
-            sx={{ marginTop: 2 }}
-            placeholder="Email"
-            value={state.email}
-            name="email"
-            onChange={handleChange}
-          />
-          <TextArea
-            sx={{ marginTop: 2 }}
-            placeholder="Message"
-            value={state.message}
-            name="message"
-            onChange={handleChange}
-          />
-          <Button loading={loading} style={{ marginTop: '20px' }}>
-            loading
-          </Button>
-        </Box>
-        <LearnMore text="Back Home" />
-        <SocailMedia />
-      </Container>
+      <Typography variant="h3">Contact.</Typography>
+      <Typography sx={{ marginY: 5 }}>
+        Get in touch or shoot me an email directly on
+        <Link href="mailto: agboolaisholaidreez@gmail.com">
+          <LinkButton> agboolaisholaidreez@gmail.com</LinkButton>
+        </Link>
+      </Typography>
+      <Box sx={{ width: '600px', maxWidth: '100%' }}>
+        <TextInput
+          placeholder="Name"
+          value={state.name}
+          name="name"
+          onChange={handleChange}
+        />
+        <TextInput
+          sx={{ marginTop: 2 }}
+          placeholder="Email"
+          value={state.email}
+          name="email"
+          onChange={handleChange}
+        />
+        <TextArea
+          sx={{ marginTop: 2 }}
+          placeholder="Message"
+          value={state.message}
+          name="message"
+          onChange={handleChange}
+        />
+        <Button loading={loading} style={{ marginTop: '20px' }}>
+          loading
+        </Button>
+      </Box>
+      <LearnMore text="Back Home" />
     </Layout>
   );
 }
