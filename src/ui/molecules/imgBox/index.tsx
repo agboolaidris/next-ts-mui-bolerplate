@@ -6,7 +6,7 @@ function ImgBox() {
   return (
     <ImgBoxOutsideWrapper>
       <ImgBoxInsideWrapper>
-        <Image src="/vercel.svg" layout="fill" />
+        <Image src="/vercel.svg" layout="fill" alt="Idris Agboola" />
       </ImgBoxInsideWrapper>
     </ImgBoxOutsideWrapper>
   );

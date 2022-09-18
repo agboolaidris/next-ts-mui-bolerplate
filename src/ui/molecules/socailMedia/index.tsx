@@ -3,6 +3,7 @@ import { Stack, SxProps, Theme } from '@mui/material';
 import React from 'react';
 import { IconWrapper } from '../../atoms/button';
 import Link from '../Link';
+import { SocialMediaWrapper } from './style';
 interface Props {
   sx?: SxProps<Theme>;
 }
@@ -31,11 +32,7 @@ export default SocailMedia;
 
 export function SocailMedia2({ sx }: Props) {
   return (
-    <Stack
-      direction="row"
-      spacing={2}
-      sx={{ marginTop: { xs: 2, md: 4 }, ...sx }}
-    >
+    <SocialMediaWrapper>
       <Link href="/">
         <IconWrapper>
           <FacebookRounded />
@@ -46,6 +43,7 @@ export function SocailMedia2({ sx }: Props) {
           <Twitter />
         </IconWrapper>
       </Link>
-    </Stack>
+      <div className="line"></div>
+    </SocialMediaWrapper>
   );
 }
