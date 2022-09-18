@@ -1,4 +1,4 @@
-import { Container, Typography, Grid } from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 import React from 'react';
 import Layout from '../layout';
 import ImgBox from '../ui/molecules/imgBox';

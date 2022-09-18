@@ -8,6 +8,7 @@ import theme from '../assets/theme';
 import createEmotionCache from '../lib/createEmotionCache';
 import StoreProvider from '../store';
 import CustomCursor from '../ui/molecules/customCursor';
+import { SnackbarProvider } from 'notistack';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -30,7 +31,12 @@ export default function MyApp(props: MyAppProps) {
           <CustomCursor />
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
-          <Component {...pageProps} />
+          <SnackbarProvider
+            autoHideDuration={6000}
+            anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
+          >
+            <Component {...pageProps} />
+          </SnackbarProvider>
         </ThemeProvider>
       </CacheProvider>
     </StoreProvider>

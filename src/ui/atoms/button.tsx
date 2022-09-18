@@ -1,6 +1,5 @@
 import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import { ButtonUnstyled } from '@mui/base';
 import { Theme } from '@mui/material';
 
 const loadingAnimation = keyframes`
@@ -56,6 +55,7 @@ export const Button = styled.button<{
     loading &&
     css`
       cursor: not-allowed !important;
+      pointer-events: none;
       &:hover {
         background-color: ${theme.colors.white};
       }
