@@ -5,10 +5,11 @@ import { AnimationIconWrapper } from '../../atoms/button';
 import Link from '../Link';
 interface Props {
   text: string;
+  href?: string;
 }
-function LearnMore({ text }: Props) {
+function LearnMore({ text, href }: Props) {
   return (
-    <Link href="/">
+    <Link href={href || '/'}>
       <Stack
         direction="row"
         alignItems="center"

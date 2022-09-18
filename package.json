@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.0",
+    "framer-motion": "^7.3.2",
     "next": "@latest",
     "react": "@latest",
     "react-animated-cursor": "^2.5.1",
