@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { Box, Theme } from '@mui/material';
 
 export const HeaderStyled = styled(Box)<{ theme?: Theme }>`
-  height: 70px;
+  height: 100px;
   width: 100%;
   padding: 0 min(5%, 100px);
   display: flex;
@@ -17,9 +17,25 @@ export const Logo = styled.a`
   cursor: pointer;
 `;
 
+export const ModeWrapper = styled.div<{ theme?: Theme }>`
+  margin-left: 50px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  font-size: 25px;
+  ${({ theme }) => theme.breakpoints.down('sm')} {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    font-size: 35px;
+  }
+`;
 export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
   display: flex;
   align-items: center;
+  position: relative;
   .link {
     margin-left: 50px;
     width: max-content;
@@ -65,6 +81,9 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
       margin-left: 0px;
       width: 100%;
       padding: 15px;
+      &:first-child {
+        margin-top: 30px;
+      }
       .underline {
         display: none;
       }

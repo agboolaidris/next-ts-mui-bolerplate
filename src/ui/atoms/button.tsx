@@ -48,6 +48,7 @@ export const Button = styled.button<{
   overflow-x: hidden;
   z-index: 1;
   transition: all 0.3s ease-in-out;
+  color: ${({ theme }) => theme.colors.black};
   &:hover {
     background-color: ${({ theme }) => theme.colors.darkWhite};
   }
@@ -55,7 +56,7 @@ export const Button = styled.button<{
     loading &&
     css`
       cursor: not-allowed !important;
-      pointer-events: none;
+
       &:hover {
         background-color: ${theme.colors.white};
       }

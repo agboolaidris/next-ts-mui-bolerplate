@@ -42,8 +42,7 @@ export const NavigationButtonWrapper = styled.button<{ theme?: Theme }>`
   border-radius: 5px;
   padding: 16px 30px;
   background-color: transparent;
-  color: ${({ theme }) => theme.colors.danger};
-
+  color: ${({ theme }) => theme.colors.danger} !important;
   transition: all 0.3s ease-in-out;
   margin-top: 40px;
   cursor: pointer;

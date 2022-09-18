@@ -43,7 +43,12 @@ function About() {
 
     setloading(true);
     emailjs
-      .send('service_870hcik', 'template_pmv9tns', state, 'LjwSl7cFFOHopIkag')
+      .send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_KEY || '',
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_KEY || '',
+        state,
+        process.env.NEXT_PUBLIC_EMAIL_SECRET_KEY
+      )
       .then(
         () => {
           setloading(false);

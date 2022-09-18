@@ -15,14 +15,6 @@ const Wrap = styled(Box)<{ theme?: Theme }>`
   padding: 1px 0px;
   min-height: 100vh;
   position: relative;
-  * {
-    font-family: Overpass Mono, monospace, sans-serif;
-  }
-  a {
-    font-size: 1em;
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.white};
-  }
 `;
 
 function Example({ children }: Props) {

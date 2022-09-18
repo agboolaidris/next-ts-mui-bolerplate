@@ -1,41 +1,44 @@
-import React, { createContext, ReactNode, useReducer, useContext } from "react";
+import React, { createContext, ReactNode, useReducer, useContext } from 'react';
 import {
-  AuthReducer,
-  authInitialState,
-  AuthIntialState,
-  AuthActionProps,
-} from "./reducers/auth";
+  ModeReducer,
+  modeInitialState,
+  ModeIntialState,
+  ModeActionProps,
+} from './reducers/mode';
 
 interface Props {
   children: ReactNode;
 }
 
 interface InitialState {
-  authInitialState: AuthIntialState;
+  modeInitialState: ModeIntialState;
 }
 
 const initialState: InitialState = {
-  authInitialState,
+  modeInitialState,
 };
 
 const StateContext = createContext<InitialState>(initialState);
-const DispatchContext = createContext<React.Dispatch<AuthActionProps>>(
+const DispatchContext = createContext<React.Dispatch<ModeActionProps>>(
   () => null
 );
 
 const globalReducer = (
-  { authInitialState }: InitialState,
-  action: AuthActionProps
+  { modeInitialState }: InitialState,
+  action: ModeActionProps
 ) => ({
-  authInitialState: AuthReducer(authInitialState, action),
+  modeInitialState: ModeReducer(modeInitialState, action),
 });
 
 const StoreProvider = ({ children }: Props) => {
   const [state, dispatch] = useReducer(globalReducer, initialState);
+
   return (
-    <DispatchContext.Provider value={dispatch}>
-      <StateContext.Provider value={state}>{children}</StateContext.Provider>
-    </DispatchContext.Provider>
+    <StateContext.Provider value={state}>
+      <DispatchContext.Provider value={dispatch}>
+        {children}
+      </DispatchContext.Provider>
+    </StateContext.Provider>
   );
 };
 

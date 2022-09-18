@@ -13,7 +13,7 @@ export const TextInputStyled = styled(Box)<{ theme?: Theme; error: boolean }>`
     background: transparent;
     outline: none;
     border: none;
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
     resize: none;
     height: 200px;
     border: 2px solid
