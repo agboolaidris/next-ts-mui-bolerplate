@@ -8,6 +8,9 @@ export const ResumeWrapper = styled.div<{ theme?: Theme; full?: boolean }>`
   width: 700px;
   overflow: hidden;
   background: ${({ theme }) => theme.colors.lightBlack};
+  * {
+    color: black !important;
+  }
   p {
     margin-block-start: 0;
     margin-block-end: 0;
