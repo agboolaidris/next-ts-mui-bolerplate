@@ -28,6 +28,22 @@ export const darkTheme = createTheme({
     fontFamily: ['Overpass Mono', ' monospace', 'sans-serif'].join(','),
   },
   colors: darkColors,
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        html: {
+          padding: '0',
+          margin: '0',
+          body: {
+            color: darkColors.white,
+            backgroundColor: darkColors.black,
+            width: '100%',
+            height: '100%',
+          },
+        },
+      },
+    },
+  },
 });
 
 export const lightTheme = createTheme({
@@ -35,6 +51,28 @@ export const lightTheme = createTheme({
     fontFamily: ['Overpass Mono', ' monospace', 'sans-serif'].join(','),
   },
   colors: lightColors,
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        color: lightColors.black,
+        html: {
+          padding: '0',
+          margin: '0',
+          fontFamily: ['Overpass Mono', ' monospace', 'sans-serif'].join(','),
+
+          '& a': {
+            fontSize: '1em',
+            textDecoration: 'none',
+          },
+          body: {
+            backgroundColor: lightColors.black,
+            width: '100%',
+            height: '100%',
+          },
+        },
+      },
+    },
+  },
 });
 
 declare module '@mui/material/styles' {
