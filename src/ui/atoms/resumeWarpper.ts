@@ -8,32 +8,20 @@ export const ResumeWrapper = styled.div<{ theme?: Theme; full?: boolean }>`
   width: 700px;
   overflow: hidden;
   background: ${({ theme }) => theme.colors.lightBlack};
+  .viewer-wrapper {
+    height: 750px;
+  }
+
   * {
-    color: black !important;
+    // font-family: Overpass Mono, monospace, sans-serif;
+    color: #070d0d !important;
+    // mix-blend-mode: difference;
   }
-  p {
-    margin-block-start: 0;
-    margin-block-end: 0;
+  p,
+  span {
+    // color: red !important;
   }
-  ${({ full }) =>
-    full &&
-    css`
-      margin: 0 auto;
-    `}
-  .PDFPage {
-    margin: auto;
-    border-top: 2px solid ${({ theme }) => theme.colors.white};
-    border-bottom: 2px solid ${({ theme }) => theme.colors.white};
-  }
-
-  .PDFPageOne {
-    width: 100%;
-    margin-bottom: 25px;
-  }
-
-  .PDFPage > canvas {
-    max-width: 100%;
-    height: auto !important;
-    margin: auto;
+  ${({ theme }) => theme.breakpoints.down('sm')} {
+    height: 500px;
   }
 `;
