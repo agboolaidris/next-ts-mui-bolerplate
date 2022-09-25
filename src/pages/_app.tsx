@@ -7,6 +7,11 @@ import StoreProvider from '../store';
 import CustomCursor from '../ui/molecules/customCursor';
 import { SnackbarProvider } from 'notistack';
 import ThemeWrapper from '../assets/theme';
+// Import styles
+import '@react-pdf-viewer/core/lib/styles/index.css';
+import '@react-pdf-viewer/default-layout/lib/styles/index.css';
+// Import styles
+import '@react-pdf-viewer/toolbar/lib/styles/index.css';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
