@@ -29,7 +29,7 @@ export const ModeWrapper = styled.div<{ theme?: Theme }>`
     position: absolute;
     left: 0px;
     top: 30px;
-    font-size: 35px;
+    ///font-size: 35px;
   }
 `;
 export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
@@ -90,11 +90,11 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
       a {
         font-size: 20px;
         font-style: bolder;
+        text-decoration: none;
       }
       &.active-link {
-        background: ${({ theme }) => theme.colors.danger};
         a {
-          color: ${({ theme }) => theme.colors.black};
+          color: ${({ theme }) => theme.colors.danger};
         }
       }
     }

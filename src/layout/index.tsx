@@ -37,7 +37,7 @@ function Example({ children }: Props) {
           className=""
         >
           {children}
-          <Box sx={{ display: { sm: 'none' } }}>
+          <Box sx={{ display: { sm: 'none' }, marginTop: '20px' }}>
             <SocailMedia sx={{ marginTop: 2 }} />
           </Box>
         </motion.main>
