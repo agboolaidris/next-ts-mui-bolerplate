@@ -4,7 +4,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { useGlobalDispatch, useGlobalState } from '../../store';
 import { darkTheme, lightTheme } from './theme';
 import Head from 'next/head';
-import { GlobalStyle } from './globalStyle';
 import { MODETYPE } from '../../store/reducers/mode';
 
 interface Props {
@@ -26,21 +25,19 @@ function ThemeWrapper({ children }: Props) {
     <ThemeProvider
       theme={modeInitialState.mode == 'dark' ? darkTheme : lightTheme}
     >
-      <GlobalStyle>
-        <Head>
-          <meta
-            name="theme-color"
-            content={
-              modeInitialState.mode == 'dark'
-                ? darkTheme.colors.black
-                : lightTheme.colors.black
-            }
-          />
-        </Head>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        {children}
-      </GlobalStyle>
+      <Head>
+        <meta
+          name="theme-color"
+          content={
+            modeInitialState.mode == 'dark'
+              ? darkTheme.colors.black
+              : lightTheme.colors.black
+          }
+        />
+      </Head>
+      {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+      <CssBaseline />
+      {children}
     </ThemeProvider>
   );
 }
