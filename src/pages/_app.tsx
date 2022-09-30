@@ -7,6 +7,7 @@ import StoreProvider from '../store';
 import CustomCursor from '../ui/molecules/customCursor';
 import { SnackbarProvider } from 'notistack';
 import ThemeWrapper from '../assets/theme';
+import '../assets/css/app.css';
 // Import styles
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';

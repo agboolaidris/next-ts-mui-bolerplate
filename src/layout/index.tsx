@@ -1,23 +1,15 @@
 import React, { ReactNode } from 'react';
-import { Box, Container, Theme } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { motion } from 'framer-motion';
-import styled from '@emotion/styled';
 import Header from '../ui/molecules/navbar';
 import SocailMedia, { SocailMedia2 } from '../ui/molecules/socailMedia';
+import { GlobalStyleLayout } from '../assets/theme/globalStyle';
 
 interface Props {
   children: ReactNode;
 }
 
-const Wrap = styled(Box)<{ theme?: Theme }>`
-  background: ${({ theme }) => theme.colors.black};
-  color: white;
-  padding: 1px 0px;
-  min-height: 100vh;
-  position: relative;
-`;
-
-function Example({ children }: Props) {
+function Layout({ children }: Props) {
   const variants = {
     hidden: { opacity: 0, x: -200, y: 0 },
     enter: { opacity: 1, x: 0, y: 0 },
@@ -25,7 +17,7 @@ function Example({ children }: Props) {
   };
 
   return (
-    <Wrap>
+    <GlobalStyleLayout>
       <Header />
       <Container sx={{ marginTop: { xs: 4, md: 10 }, marginBottom: 4 }}>
         <motion.main
@@ -43,8 +35,8 @@ function Example({ children }: Props) {
         </motion.main>
       </Container>
       <SocailMedia2 />
-    </Wrap>
+    </GlobalStyleLayout>
   );
 }
 
-export default Example;
+export default Layout;
