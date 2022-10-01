@@ -4,7 +4,6 @@ import { Theme } from '@mui/material';
 export const GlobalStyleLayout = styled.div<{ theme?: Theme }>`
   * {
     font-family: Overpass Mono, monospace, sans-serif;
-
     color: ${({ theme }) => theme.colors.white};
   }
   background: ${({ theme }) => theme.colors.black};

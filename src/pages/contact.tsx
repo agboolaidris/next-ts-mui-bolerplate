@@ -68,7 +68,7 @@ function About() {
     <Layout>
       <Typography variant="h3">Contact.</Typography>
       <Typography sx={{ marginY: 5 }}>
-        Get in touch or shoot me an email directly on
+        If you have any questions, feel free to contact me directly at <br />
         <a
           href="mailto: agboolaisholaidreez@gmail.com"
           rel="noreferrer"

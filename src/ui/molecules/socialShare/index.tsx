@@ -15,7 +15,13 @@ import {
 } from 'react-share';
 import { Stack } from '@mui/system';
 import { SocialIconWrapper } from './style';
-import { FacebookRounded, Twitter } from '@mui/icons-material';
+import {
+  FacebookRounded,
+  Twitter,
+  LinkedIn,
+  WhatsApp,
+  EmailRounded,
+} from '@mui/icons-material';
 
 const BootstrapDialog = styled(Dialog)<{ theme?: Theme }>`
   color: ${({ theme }) => theme.colors.white} !important;
@@ -37,7 +43,8 @@ interface Props {
   handleClose: () => void;
 }
 export default function SocialShare({ open, handleClose }: Props) {
-  const url = '/resume';
+  const url = process.env.NEXT_PUBLIC_URL + '/resume';
+  const content = 'This is such an amazing portfolio that I found online';
   return (
     <BootstrapDialog
       onClose={handleClose}
@@ -64,7 +71,8 @@ export default function SocialShare({ open, handleClose }: Props) {
         </Typography>
 
         <Typography gutterBottom>
-          Aenean lacinia bibendum nulla sed consectetur. Praesent commodo.
+          I would appreciate it if you shared my resume on any of these social
+          networks
         </Typography>
         <Stack
           direction="row"
@@ -73,16 +81,31 @@ export default function SocialShare({ open, handleClose }: Props) {
           alignItems="center"
           sx={{ marginTop: 4 }}
         >
-          <TwitterShareButton url={url} hashtags={['dev']}>
+          <EmailShareButton url={url} subject="">
+            <SocialIconWrapper>
+              <EmailRounded />
+            </SocialIconWrapper>
+          </EmailShareButton>
+          <LinkedinShareButton url={url} title={content}>
+            <SocialIconWrapper>
+              <LinkedIn />
+            </SocialIconWrapper>
+          </LinkedinShareButton>
+          <TwitterShareButton url={url} hashtags={['dev']} title={content}>
             <SocialIconWrapper>
               <Twitter />
             </SocialIconWrapper>
           </TwitterShareButton>
-          <FacebookShareButton url={url}>
+          <FacebookShareButton url={url} quote={content}>
             <SocialIconWrapper>
               <FacebookRounded />
             </SocialIconWrapper>
           </FacebookShareButton>
+          <WhatsappShareButton url={url} title={content}>
+            <SocialIconWrapper>
+              <WhatsApp />
+            </SocialIconWrapper>
+          </WhatsappShareButton>
         </Stack>
       </DialogContent>
     </BootstrapDialog>

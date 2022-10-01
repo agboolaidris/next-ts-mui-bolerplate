@@ -18,6 +18,7 @@ import {
   ToolbarSlot,
 } from '@react-pdf-viewer/default-layout';
 import { TransformToolbarSlot, toolbarPlugin } from '@react-pdf-viewer/toolbar';
+import Link from '../ui/molecules/Link';
 
 function Resume() {
   // Create new plugin instance
@@ -48,21 +49,21 @@ function Resume() {
   return (
     <Layout>
       <Typography variant="h3">Resumé.</Typography>
-      <Typography sx={{ marginY: 4 }}>
-        Contact me via{' '}
-        <a href="contact">
+      <Typography sx={{ marginY: 4, maxWidth: '700px' }}>
+        Please feel free to contact me via my{' '}
+        <Link href="contact">
           <LinkButton> contact page</LinkButton>
-        </a>
-        .
-        <a download href="resume.pdf">
-          <LinkButton> Download </LinkButton>
-        </a>
-        or
+        </Link>
+        . You can{' '}
         <a href="#">
           {' '}
           <LinkButton onClick={handleOpenModal}> share </LinkButton>
-        </a>
-        my Resume.
+        </a>{' '}
+        or{' '}
+        <a download href="resume.pdf">
+          <LinkButton> Download </LinkButton>
+        </a>{' '}
+        my resume here.
       </Typography>
       <ResumeWrapper>
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.15.349/build/pdf.worker.js">
@@ -75,7 +76,7 @@ function Resume() {
         </Worker>
       </ResumeWrapper>
       <SocialShare handleClose={handleCloseModal} open={open} />
-      <LearnMore text="Learn More About Me" />
+      <LearnMore text="Reach out to me" href="/contact" />
     </Layout>
   );
 }
