@@ -3,38 +3,11 @@ import React from 'react';
 import Layout from '../layout';
 import ImgBox from '../ui/molecules/imgBox';
 import LearnMore from '../ui/molecules/learnMore';
-import Link from '../ui/molecules/Link';
+import aboutItems from '../constants/about';
+
 import VerticalLinearStepper from '../ui/molecules/stepper';
 
 function About() {
-  const items = [
-    {
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Doloremque dolorum reprehenderit, perspiciatis eligendi
-          repudiandae harum atque consectetur. Atque numquam nostrum fugit
-          minima quisquam accusantium veniam esse. Incidunt a doloribus
-          praesentium.`,
-      substitle: 'Engineering',
-      link: <Link href="/">view github</Link>,
-    },
-    {
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Doloremque dolorum reprehenderit, perspiciatis eligendi
-            repudiandae harum atque consectetur. Atque numquam nostrum fugit
-            minima quisquam accusantium veniam esse. Incidunt a doloribus
-            praesentium.`,
-      substitle: 'Engineering',
-    },
-    {
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque dolorum reprehenderit, perspiciatis eligendi
-                repudiandae harum atque consectetur. Atque numquam nostrum fugit
-                minima quisquam accusantium veniam esse. Incidunt a doloribus
-                praesentium.`,
-      substitle: 'Engineering',
-      link: <Link href="/">view github</Link>,
-    },
-  ];
   return (
     <Layout>
       <Typography variant="h3">About Me.</Typography>
@@ -45,16 +18,17 @@ function About() {
       >
         <Grid item xs={12} md={6}>
           <Typography>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            dolorum reprehenderit, perspiciatis eligendi repudiandae harum atque
-            consectetur. Atque numquam nostrum fugit minima quisquam accusantium
-            veniam esse. Incidunt a doloribus praesentium.
+            Hi! my name is Idris Agboola and I love using my skill set to
+            simplify work for enterprises.I also like sharing content related to
+            the stuff that I have learned over a long time in software
+            development so it can offer assistance to other individuals in the
+            Dev Community.
           </Typography>
           <Typography sx={{ marginTop: 2 }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            dolorum reprehenderit, perspiciatis eligendi repudiandae harum atque
-            consectetur. Atque numquam nostrum fugit minima quisquam accusantium
-            veniam esse. Incidunt a doloribus praesentium.
+            fast-forward to today, I have the opportunity to work in Ritemate
+            technology, 1worq, and invoke-creation as a software developer.
+            These days, I focus on building accessible, inclusive products and
+            digital experiences for Invoke-creation.
           </Typography>
         </Grid>
         <Grid
@@ -67,12 +41,14 @@ function About() {
             justifyContent: { xs: 'flex-start', md: 'center' },
           }}
         >
-          <ImgBox />
+          <ImgBox src="/idris.png" />
         </Grid>
       </Grid>
-      <VerticalLinearStepper title="Carrer" items={items} />
-      <VerticalLinearStepper title="Hobby" items={items} />
-      <LearnMore text="Learn More About Me" />
+      {aboutItems.map((item) => (
+        <VerticalLinearStepper title={item.title} items={item.item} />
+      ))}
+
+      <LearnMore text="Reach out to me" href="/contact" />
     </Layout>
   );
 }
