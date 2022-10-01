@@ -6,6 +6,7 @@ import LearnMore from '../ui/molecules/learnMore';
 import aboutItems from '../constants/about';
 
 import VerticalLinearStepper from '../ui/molecules/stepper';
+import { LinkButton } from '../ui/atoms/button';
 
 function About() {
   return (
@@ -25,10 +26,19 @@ function About() {
             Dev Community.
           </Typography>
           <Typography sx={{ marginTop: 2 }}>
-            fast-forward to today, I have the opportunity to work in Ritemate
-            technology, 1worq, and invoke-creation as a software developer.
-            These days, I focus on building accessible, inclusive products and
-            digital experiences for Invoke-creation.
+            fast-forward to today, I have the opportunity to work in
+            <a href="http://www.ritemate.com/" rel="noreferrer" target="_blank">
+              <LinkButton> Ritemate technology</LinkButton>,
+            </a>
+            <a href="https://1worq.com/" rel="noreferrer" target="_blank">
+              <LinkButton> 1worq</LinkButton>,
+            </a>{' '}
+            and{' '}
+            <a href="####" rel="noreferrer" target="_blank">
+              <LinkButton> Invoke-Creation</LinkButton>,
+            </a>{' '}
+            as a software developer. These days, I focus on building accessible,
+            inclusive products and digital experiences for Invoke-creation.
           </Typography>
         </Grid>
         <Grid
