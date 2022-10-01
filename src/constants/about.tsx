@@ -1,5 +1,5 @@
 import Link from '../ui/molecules/Link';
-export default [
+const data = [
   {
     title: 'My Career',
     item: [
@@ -81,3 +81,4 @@ export default [
     ],
   },
 ];
+export default data;

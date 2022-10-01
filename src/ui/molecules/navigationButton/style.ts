@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { keyframes } from '@emotion/react';
 import { Theme } from '@mui/material';
 
 export const NavigationButtonWrapper = styled.button<{ theme?: Theme }>`
@@ -12,8 +13,9 @@ export const NavigationButtonWrapper = styled.button<{ theme?: Theme }>`
   background-color: transparent;
   color: ${({ theme }) => theme.colors.danger} !important;
   transition: all 0.3s ease-in-out;
-  margin-top: 20px;
+  margin-top: 25px;
   cursor: pointer;
+
   &:hover {
     transform: scale(0.9);
   }

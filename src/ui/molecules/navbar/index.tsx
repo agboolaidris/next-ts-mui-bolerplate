@@ -1,4 +1,5 @@
 import React, { useState, ReactNode } from 'react';
+import Image from 'next/image';
 import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/router';
 import { HeaderStyled, Logo, NavBar, Harmburger, ModeWrapper } from './style';
@@ -6,6 +7,7 @@ import { TimesIcon, BarIcon } from '../../icons';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { useGlobalDispatch, useGlobalState } from '../../../store';
 import { MODETYPE } from '../../../store/reducers/mode';
+
 interface LinkProps2 extends LinkProps {
   children: ReactNode;
 }
@@ -32,7 +34,18 @@ function Header() {
   return (
     <HeaderStyled>
       <Link href="/">
-        <Logo>{`<I_AM_IDRIS/>`}</Logo>
+        <Logo>
+          <Image
+            src={
+              modeInitialState.mode === 'dark'
+                ? '/whitelogo.png'
+                : '/blacklogo.png'
+            }
+            width={70}
+            height={40}
+            alt="Idris Agboola"
+          />
+        </Logo>
       </Link>
       <Harmburger onClick={() => setOpenMobileDrawer(!openMobileDrawer)}>
         {openMobileDrawer ? <TimesIcon /> : <BarIcon />}

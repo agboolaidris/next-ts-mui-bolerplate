@@ -34,7 +34,7 @@ function About() {
               <LinkButton> 1worq</LinkButton>,
             </a>{' '}
             and{' '}
-            <a href="####" rel="noreferrer" target="_blank">
+            <a href="####" rel="noreferrer">
               <LinkButton> Invoke-Creation</LinkButton>,
             </a>{' '}
             as a software developer. These days, I focus on building accessible,
@@ -54,8 +54,12 @@ function About() {
           <ImgBox src="/idris.png" />
         </Grid>
       </Grid>
-      {aboutItems.map((item) => (
-        <VerticalLinearStepper title={item.title} items={item.item} />
+      {aboutItems.map((item, index) => (
+        <VerticalLinearStepper
+          title={item.title}
+          items={item.item}
+          key={index}
+        />
       ))}
 
       <LearnMore text="Reach out to me" href="/contact" />
