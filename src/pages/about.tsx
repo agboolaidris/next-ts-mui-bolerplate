@@ -4,7 +4,6 @@ import Layout from '../layout';
 import ImgBox from '../ui/molecules/imgBox';
 import LearnMore from '../ui/molecules/learnMore';
 import aboutItems from '../constants/about';
-
 import VerticalLinearStepper from '../ui/molecules/stepper';
 import { LinkButton } from '../ui/atoms/button';
 
