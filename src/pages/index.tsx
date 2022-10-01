@@ -13,8 +13,8 @@ const Home: NextPage = () => {
     <Layout>
       <ShowTypography className="link">I&apos;m Idris Agboola</ShowTypography>
       <Typography variant="body1" sx={{ marginTop: { xs: 2, md: 4 } }}>
-        Software Engineer & Fashion enthusiast based in Lagos, Nigeria. Highly
-        experienced in developing secure and dynamic applications.
+        A software engineer and fashion enthusiast residing in Lagos, Nigeria. I
+        am highly experienced in developing secure and dynamic applications.
       </Typography>
 
       <Typography variant="body1" sx={{ marginTop: { xs: 2, md: 4 } }}>
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
         .
       </Typography>
 
-      <NavigationButton text="Learn More About Me" />
+      <NavigationButton text="Learn More About Me" href="/about" />
 
       <TextAnimated text={'IRIS WELCOME YOU'} />
     </Layout>

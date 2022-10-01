@@ -15,6 +15,7 @@ export const Logo = styled.a`
   font-size: 1.2rem;
   font-weight: bolder;
   cursor: pointer;
+  display: block;
 `;
 
 export const ModeWrapper = styled.div<{ theme?: Theme }>`

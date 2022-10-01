@@ -34,7 +34,7 @@ function About() {
               <LinkButton> 1worq</LinkButton>,
             </a>{' '}
             and{' '}
-            <a href="####" rel="noreferrer" target="_blank">
+            <a href="####" rel="noreferrer">
               <LinkButton> Invoke-Creation</LinkButton>,
             </a>{' '}
             as a software developer. These days, I focus on building accessible,

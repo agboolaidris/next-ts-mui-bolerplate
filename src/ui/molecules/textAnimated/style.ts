@@ -16,6 +16,14 @@ const Light = (theme?: Theme) =>
     }
 
 `;
+const Moving = keyframes`
+0%{
+  transform:translate(-100%)
+}
+100%{
+  transform:translate(100%)
+}
+`;
 
 export const LightText = styled.span<{ delay?: number; theme?: Theme }>`
   animation: ${({ theme }) => Light(theme)} 1s linear infinite;
@@ -31,4 +39,5 @@ export const TextStyled = styled.div`
   transform: translateX(-50%);
   width: 100%;
   text-align: center;
+  animation: ${Moving} 7s ease-in infinite;
 `;
