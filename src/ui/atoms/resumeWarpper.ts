@@ -13,13 +13,10 @@ export const ResumeWrapper = styled.div<{ theme?: Theme; full?: boolean }>`
   }
 
   * {
-    // font-family: Overpass Mono, monospace, sans-serif;
     color: #070d0d !important;
-    // mix-blend-mode: difference;
   }
   p,
   span {
-    // color: red !important;
   }
   ${({ theme }) => theme.breakpoints.down('sm')} {
     height: 500px;
