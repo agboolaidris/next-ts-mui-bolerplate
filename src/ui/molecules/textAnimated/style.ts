@@ -28,7 +28,7 @@ const Moving = keyframes`
 export const LightText = styled.span<{ delay?: number; theme?: Theme }>`
   animation: ${({ theme }) => Light(theme)} 1s linear infinite;
 `;
-export const TextStyled = styled.div`
+export const TextStyled = styled.div<{ theme?: Theme }>`
   font-size: 6em;
   color: #333;
   font-weight: 500;
@@ -40,4 +40,7 @@ export const TextStyled = styled.div`
   width: 100%;
   text-align: center;
   animation: ${Moving} 7s ease-in infinite;
+  ${({ theme }) => theme.breakpoints.down('sm')} {
+    display: none;
+  }
 `;

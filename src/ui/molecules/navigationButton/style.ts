@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { keyframes } from '@emotion/react';
 import { Theme } from '@mui/material';
 
 export const NavigationButtonWrapper = styled.button<{ theme?: Theme }>`

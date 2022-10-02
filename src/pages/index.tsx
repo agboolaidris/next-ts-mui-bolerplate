@@ -18,8 +18,8 @@ const Home: NextPage = () => {
       </Typography>
 
       <Typography variant="body1" sx={{ marginTop: { xs: 2, md: 4 } }}>
-        I love using my skill set to solve problems and improve the lives of
-        people around me. View my Projects,{' '}
+        I love using my skill set to simplify work for enterprises and improve
+        the lives of people around me. View my Projects,{' '}
         <Link href="/">
           <LinkButton>Articles,</LinkButton>
         </Link>

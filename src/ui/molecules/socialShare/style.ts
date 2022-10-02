@@ -3,7 +3,7 @@ import { Theme } from '@mui/material';
 
 export const SocialIconWrapper = styled.div<{ theme?: Theme }>`
   color: ${({ theme }) => theme.colors.white};
-  // background: ${({ theme }) => theme.colors.black};
+
   width: 40px;
   height: 40px;
   display: flex;

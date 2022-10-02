@@ -66,7 +66,7 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     z-index: 40;
     background: ${({ theme }) => theme.colors.black};
     left: 0;
-    top: 60px;
+    top: 0;
     flex-direction: column;
     padding-inline-start: 0px;
     height: 100vh;
@@ -107,5 +107,6 @@ export const Harmburger = styled.div<{ theme?: Theme }>`
 
   ${({ theme }) => theme.breakpoints.down('sm')} {
     display: block;
+    z-index: 100;
   }
 `;
