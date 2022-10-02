@@ -19,7 +19,7 @@ function ThemeWrapper({ children }: Props) {
     if (mode === 'light')
       dispatch({ type: MODETYPE.LIGHT, payload: { mode: '' } });
     else dispatch({ type: MODETYPE.DARK, payload: { mode: '' } });
-  }, []);
+  }, [dispatch]);
 
   return (
     <ThemeProvider
