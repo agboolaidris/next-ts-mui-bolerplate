@@ -11,11 +11,21 @@ export const HeaderStyled = styled(Box)<{ theme?: Theme }>`
   align-items: center;
 `;
 
-export const Logo = styled.a`
-  font-size: 1.2rem;
+export const Logo = styled.a<{ theme?: Theme }>`
+  font-size: 2.5rem;
   font-weight: bolder;
   cursor: pointer;
   display: block;
+
+  ${({ theme }) =>
+    true &&
+    css`
+      color: ${theme.colors.lightBlack};
+      text-shadow: 0 0 5px ${theme.colors.white}, 0 0 10px ${theme.colors.white},
+        0 0 15px ${theme.colors.white}, 0 0 20px ${theme.colors.yellow},
+        0 0 30px ${theme.colors.yellow}, 0 0 40px ${theme.colors.yellow},
+        0 0 55px ${theme.colors.yellow}, 0 0 75px ${theme.colors.yellow};
+    `}
 `;
 
 export const ModeWrapper = styled.div<{ theme?: Theme }>`

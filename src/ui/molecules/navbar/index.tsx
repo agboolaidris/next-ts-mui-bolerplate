@@ -35,16 +35,13 @@ function Header() {
     <HeaderStyled>
       <Link href="/">
         <Logo>
-          <Image
-            src={
-              modeInitialState.mode === 'dark'
-                ? '/whitelogo.png'
-                : '/blacklogo.png'
-            }
-            width={70}
-            height={40}
+          {/* <Image
+            src={modeInitialState.mode === 'dark' ? '/wh.png' : '/24.png'}
+            width={120}
+            height={90}
             alt="Idris Agboola"
-          />
+          /> */}
+          AI
         </Logo>
       </Link>
       <Harmburger onClick={() => setOpenMobileDrawer(!openMobileDrawer)}>
