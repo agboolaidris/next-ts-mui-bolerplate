@@ -20,6 +20,7 @@
     "@react-pdf-viewer/toolbar": "^3.7.0",
     "framer-motion": "^7.3.2",
     "next": "@latest",
+    "next-seo": "^5.5.0",
     "notistack": "^2.0.5",
     "react": "@latest",
     "react-dom": "@latest",

@@ -6,6 +6,7 @@ import createEmotionCache from '../lib/createEmotionCache';
 import StoreProvider from '../store';
 import CustomCursor from '../ui/molecules/customCursor';
 import { SnackbarProvider } from 'notistack';
+import { NextSeo } from 'next-seo';
 import ThemeWrapper from '../assets/theme';
 import '../assets/css/app.css';
 // Import styles
@@ -23,12 +24,44 @@ interface MyAppProps extends AppProps {
 
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const url = process.env.NEXT_PUBLIC_URL;
+  const description = `A software engineer and fashion enthusiast residing in Lagos, Nigeria. I
+  am highly experienced in developing secure and dynamic applications.`;
+  const title = 'Home | Agboola Idris';
   return (
     <StoreProvider>
       <CacheProvider value={emotionCache}>
-        <Head>
-          <meta name="viewport" content="initial-scale=1, width=device-width" />
-        </Head>
+        <NextSeo
+          title={title}
+          description={description}
+          canonical={url}
+          openGraph={{
+            url: url,
+            title: title,
+            description: description,
+            images: [
+              {
+                url: 'https://www.example.ie/og-image-01.jpg',
+                width: 800,
+                height: 600,
+                alt: 'Og Image Alt',
+                type: 'image/jpeg',
+              },
+            ],
+            site_name: 'Agboola Idris Portfolio',
+          }}
+          twitter={{
+            handle: '@handle',
+            site: '@site',
+            cardType: 'summary_large_image',
+          }}
+          additionalMetaTags={[
+            {
+              name: 'viewport',
+              content: 'initial-scale=1, width=device-width',
+            },
+          ]}
+        />
 
         <ThemeWrapper>
           <CustomCursor />
