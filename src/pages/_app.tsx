@@ -41,11 +41,11 @@ export default function MyApp(props: MyAppProps) {
             description: description,
             images: [
               {
-                url: 'https://www.example.ie/og-image-01.jpg',
+                url: '/icon.png',
                 width: 800,
                 height: 600,
                 alt: 'Og Image Alt',
-                type: 'image/jpeg',
+                type: 'image/png',
               },
             ],
             site_name: 'Agboola Idris Portfolio',

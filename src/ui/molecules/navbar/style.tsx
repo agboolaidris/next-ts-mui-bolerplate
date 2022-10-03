@@ -22,9 +22,9 @@ export const Logo = styled.a<{ theme?: Theme }>`
     css`
       color: ${theme.colors.lightBlack};
       text-shadow: 0 0 5px ${theme.colors.white}, 0 0 10px ${theme.colors.white},
-        0 0 15px ${theme.colors.white}, 0 0 20px ${theme.colors.yellow},
-        0 0 30px ${theme.colors.yellow}, 0 0 40px ${theme.colors.yellow},
-        0 0 55px ${theme.colors.yellow}, 0 0 75px ${theme.colors.yellow};
+        0 0 15px ${theme.colors.white}, 0 0 20px ${theme.colors.white},
+        0 0 30px ${theme.colors.white}, 0 0 40px ${theme.colors.white},
+        0 0 55px ${theme.colors.white}, 0 0 75px ${theme.colors.white};
     `}
 `;
 
@@ -40,7 +40,6 @@ export const ModeWrapper = styled.div<{ theme?: Theme }>`
     position: absolute;
     left: 0px;
     top: 30px;
-    ///font-size: 35px;
   }
 `;
 export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
@@ -77,12 +76,15 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     background: ${({ theme }) => theme.colors.black};
     left: 0;
     top: 0;
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
     flex-direction: column;
     padding-inline-start: 0px;
     height: 100vh;
-    padding: 20px 0px;
+    padding-top: 50px;
     transform: translatex(-100%);
     transition: all 0.3s ease-in-out;
+
     ${({ open }) =>
       open &&
       css`
@@ -92,6 +94,7 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
       margin-left: 0px;
       width: 100%;
       padding: 15px;
+      margin-top: 20px;
       &:first-child {
         margin-top: 30px;
       }
