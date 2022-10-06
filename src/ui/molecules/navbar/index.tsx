@@ -14,7 +14,7 @@ function CustomLink({ children, href, ...props }: LinkProps2) {
   const router = useRouter();
   return (
     <>
-      {router.pathname !== href ? (
+      {router.pathname !== href && !router.pathname.includes(`${href}/`) ? (
         <div className={router.pathname === href ? 'active-link link' : 'link'}>
           <Link href={href} {...props}>
             {children}
@@ -44,6 +44,7 @@ function Header() {
       <NavBar open={openMobileDrawer}>
         <CustomLink href="/">Home</CustomLink>
         <CustomLink href="/about">About</CustomLink>
+        <CustomLink href="/blogs">Blog</CustomLink>
         <CustomLink href="/resume">Resumé</CustomLink>
         <CustomLink href="/contact">Contact</CustomLink>
         <ModeWrapper onClick={handleChangeThemeMode}>

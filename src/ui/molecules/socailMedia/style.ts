@@ -25,7 +25,6 @@ export const SocialMediaWrapper = styled.div<{ theme?: Theme }>`
 
 export const SocialMediaIconWrapper = styled.div<{ theme?: Theme }>`
   color: ${({ theme }) => theme.colors.white};
-  margin-top: 10px;
   width: 30px;
   height: 30px;
   display: flex;

@@ -29,8 +29,8 @@ function Layout({ children }: Props) {
           className=""
         >
           {children}
-          <Box sx={{ display: { sm: 'none' }, marginTop: '20px' }}>
-            <SocailMedia sx={{ marginTop: 2 }} />
+          <Box sx={{ display: { sm: 'none' } }}>
+            <SocailMedia sx={{ marginTop: { xs: 2, md: 4 } }} />
           </Box>
         </motion.main>
       </Container>

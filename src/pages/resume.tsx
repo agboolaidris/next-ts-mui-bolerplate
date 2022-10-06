@@ -2,9 +2,7 @@ import { Typography } from '@mui/material';
 import React, { useState, ReactElement } from 'react';
 import Layout from '../layout';
 import { ResumeWrapper } from '../ui/atoms/resumeWarpper';
-import { IconWrapper, LinkButton } from '../ui/atoms/button';
-
-import ShareIcon from '@mui/icons-material/Share';
+import { LinkButton } from '../ui/atoms/button';
 import SocialShare from '../ui/molecules/socialShare';
 import LearnMore from '../ui/molecules/learnMore';
 
@@ -19,6 +17,7 @@ import {
 } from '@react-pdf-viewer/default-layout';
 import { TransformToolbarSlot, toolbarPlugin } from '@react-pdf-viewer/toolbar';
 import Link from '../ui/molecules/Link';
+import SEO from '../ui/molecules/seo';
 
 function Resume() {
   // Create new plugin instance
@@ -48,6 +47,7 @@ function Resume() {
 
   return (
     <Layout>
+      <SEO title="Resume | Agboola Idris" />
       <Typography variant="h3">Resumé.</Typography>
       <Typography sx={{ marginY: 4, maxWidth: '700px' }}>
         Please feel free to contact me via my{' '}
