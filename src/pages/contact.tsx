@@ -6,9 +6,9 @@ import { isEmail } from '../helpers/isEmail';
 import Layout from '../layout';
 import { Button, LinkButton } from '../ui/atoms/button';
 import LearnMore from '../ui/molecules/learnMore';
-import Link from '../ui/molecules/Link';
 import TextArea from '../ui/molecules/textArea';
 import TextInput from '../ui/molecules/textInput';
+import SEO from '../ui/molecules/seo';
 
 function About() {
   const initialState = { name: '', email: '', message: '' };
@@ -66,6 +66,7 @@ function About() {
 
   return (
     <Layout>
+      <SEO title="Contact | Agboola Idris" />
       <Typography variant="h3">Contact.</Typography>
       <Typography sx={{ marginY: 5 }}>
         If you have any questions, feel free to contact me directly at <br />

@@ -14,7 +14,7 @@ function LearnMore({ text, href }: Props) {
         direction="row"
         alignItems="center"
         spacing={2}
-        sx={{ marginTop: { xs: 1, md: 4 } }}
+        sx={{ marginTop: { xs: 2, md: 4 } }}
       >
         <p>{text}</p>
         <AnimationIconWrapper>

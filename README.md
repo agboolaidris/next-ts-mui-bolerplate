@@ -1,6 +1,4 @@
-# Nextjs + MUI5 + Typescript + Emotions + Jest
-
-Boilerplate for Nextjs and material-ui 5 with some advance fixtures
+# Agboola Idris Portfolio
 
 Steps to run this project:
 

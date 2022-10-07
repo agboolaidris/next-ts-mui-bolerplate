@@ -13,11 +13,7 @@ interface Props {
 }
 function SocailMedia({ sx }: Props) {
   return (
-    <Stack
-      direction="row"
-      spacing={2}
-      sx={{ marginTop: { xs: 2, md: 4 }, ...sx }}
-    >
+    <Stack direction="row" spacing={2} sx={{ ...sx }}>
       <a href="https://github.com/agboolaidris">
         <SocialMediaIconWrapper>
           <GitHub />

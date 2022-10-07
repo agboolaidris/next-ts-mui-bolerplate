@@ -6,10 +6,12 @@ import LearnMore from '../ui/molecules/learnMore';
 import aboutItems from '../constants/about';
 import VerticalLinearStepper from '../ui/molecules/stepper';
 import { LinkButton } from '../ui/atoms/button';
+import SEO from '../ui/molecules/seo';
 
 function About() {
   return (
     <Layout>
+      <SEO title="About | Agboola Idris" />
       <Typography variant="h3">About Me.</Typography>
       <Grid
         container
