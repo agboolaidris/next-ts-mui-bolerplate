@@ -9,6 +9,7 @@ import { MODETYPE } from '../../store/reducers/mode';
 interface Props {
   children: ReactNode;
 }
+
 function ThemeWrapper({ children }: Props) {
   const { modeInitialState } = useGlobalState();
   const dispatch = useGlobalDispatch();

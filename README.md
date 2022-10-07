@@ -1,4 +1,6 @@
-# Agboola Idris Portfolio
+# Nextjs + MUI5 + Typescript + Emotions 
+
+Boilerplate for Nextjs and material-ui 5 with some advance fixtures
 
 Steps to run this project:
 

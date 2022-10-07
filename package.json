@@ -15,9 +15,6 @@
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.0",
-    "@react-pdf-viewer/core": "^3.7.0",
-    "@react-pdf-viewer/default-layout": "^3.7.0",
-    "@react-pdf-viewer/toolbar": "^3.7.0",
     "axios": "^1.0.0",
     "framer-motion": "^7.3.2",
     "moment": "^2.29.4",
@@ -25,15 +22,12 @@
     "next-seo": "^5.5.0",
     "notistack": "^2.0.5",
     "react": "@latest",
-    "react-dom": "@latest",
-    "react-share": "^4.4.0"
+    "react-dom": "@latest"
   },
   "devDependencies": {
     "@types/node": "18.6.5",
-    "@types/pdf-viewer-reactjs": "^2.2.2",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
-    "@types/react-pdf": "^5.7.2",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.4",
     "eslint-config-prettier": "^8.5.0",

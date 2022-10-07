@@ -1,11 +1,10 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import { useSnackbar } from 'notistack';
 import emailjs from '@emailjs/browser';
 import { isEmail } from '../helpers/isEmail';
 import Layout from '../layout';
-import { Button, LinkButton } from '../ui/atoms/button';
-import LearnMore from '../ui/molecules/learnMore';
+import { Button } from '../ui/atoms/button';
 import TextArea from '../ui/molecules/textArea';
 import TextInput from '../ui/molecules/textInput';
 import SEO from '../ui/molecules/seo';
@@ -67,17 +66,6 @@ function About() {
   return (
     <Layout>
       <SEO title="Contact | Agboola Idris" />
-      <Typography variant="h3">Contact.</Typography>
-      <Typography sx={{ marginY: 5 }}>
-        If you have any questions, feel free to contact me directly at <br />
-        <a
-          href="mailto: agboolaisholaidreez@gmail.com"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <LinkButton> agboolaisholaidreez@gmail.com</LinkButton>
-        </a>
-      </Typography>
       <Box sx={{ width: '600px', maxWidth: '100%' }}>
         <TextInput
           placeholder="Name"
@@ -111,7 +99,6 @@ function About() {
           {loading ? 'loading' : 'submit'}
         </Button>
       </Box>
-      <LearnMore text="Back Home" />
     </Layout>
   );
 }

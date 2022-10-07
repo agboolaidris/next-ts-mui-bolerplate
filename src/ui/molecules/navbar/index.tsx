@@ -6,6 +6,7 @@ import { TimesIcon, BarIcon } from '../../icons';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { useGlobalDispatch } from '../../../store';
 import { MODETYPE } from '../../../store/reducers/mode';
+import { InavItem } from '../../../interface/nav';
 
 interface LinkProps2 extends LinkProps {
   children: ReactNode;
@@ -13,20 +14,19 @@ interface LinkProps2 extends LinkProps {
 function CustomLink({ children, href, ...props }: LinkProps2) {
   const router = useRouter();
   return (
-    <>
-      {router.pathname !== href && !router.pathname.includes(`${href}/`) ? (
-        <div className={router.pathname === href ? 'active-link link' : 'link'}>
-          <Link href={href} {...props}>
-            {children}
-          </Link>
-          <div className="underline"></div>
-        </div>
-      ) : null}
-    </>
+    <div className={router.pathname === href ? 'active-link link' : 'link'}>
+      <Link href={href} {...props}>
+        {children}
+      </Link>
+      <div className="underline"></div>
+    </div>
   );
 }
 
-function Header() {
+interface Iheader {
+  items: InavItem[];
+}
+function Header({ items }: Iheader) {
   const [openMobileDrawer, setOpenMobileDrawer] = useState(false);
   const dispatch = useGlobalDispatch();
   const handleChangeThemeMode = () => {
@@ -42,11 +42,12 @@ function Header() {
         {openMobileDrawer ? <TimesIcon /> : <BarIcon />}
       </Harmburger>
       <NavBar open={openMobileDrawer}>
-        <CustomLink href="/">Home</CustomLink>
-        <CustomLink href="/about">About</CustomLink>
-        <CustomLink href="/blogs">Blog</CustomLink>
-        <CustomLink href="/resume">Resumé</CustomLink>
-        <CustomLink href="/contact">Contact</CustomLink>
+        {items.map((item) => (
+          <CustomLink href={item.href} key={item.href}>
+            {item.title}
+          </CustomLink>
+        ))}
+
         <ModeWrapper onClick={handleChangeThemeMode}>
           <LightModeIcon fontSize="inherit" />
         </ModeWrapper>

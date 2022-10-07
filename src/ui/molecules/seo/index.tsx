@@ -11,10 +11,7 @@ function SEO({ title, description, urlPath }: Props) {
   const url = urlPath
     ? process.env.NEXT_PUBLIC_URL + '/' + urlPath
     : process.env.NEXT_PUBLIC_URL;
-  const Idescription =
-    description ||
-    `A software engineer and fashion enthusiast residing in Lagos, Nigeria. I
-  am highly experienced in developing secure and dynamic applications.`;
+  const Idescription = description || `template`;
   const Ititle = title || 'Home | Agboola Idris';
   return (
     <NextSeo

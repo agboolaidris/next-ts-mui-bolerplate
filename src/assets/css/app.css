@@ -6,11 +6,5 @@ html {
   overflow-x: hidden;
 }
 a {
-  font-size: 1em;
   text-decoration: none;
-}
-body {
-  min-height: max-content;
-  overflow: hidden;
-  background-color: brown;
 }
