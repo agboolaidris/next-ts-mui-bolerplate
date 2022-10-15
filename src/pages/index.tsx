@@ -6,12 +6,14 @@ import { Text } from '../ui/atoms/text';
 const Home: NextPage = () => {
   return (
     <Layout>
-      <Text as="h1">Hello world</Text>
+      <Text as="h1" hover="yellow">
+        Hello world
+      </Text>
       <Text as="h2">Hello world</Text>
       <Text as="h3">Hello world</Text>
       <Text as="h4">Hello world</Text>
       <Text as="h5">Hello world</Text>
-      <Text>
+      <Text hover="danger">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi hic nobis,
         maiores harum eius reprehenderit commodi tempora officiis? Nemo
         blanditiis voluptate inventore soluta corporis possimus commodi
@@ -29,7 +31,7 @@ const Home: NextPage = () => {
         blanditiis voluptate inventore soluta corporis possimus commodi
         asperiores animi debitis iusto.
       </Text>
-      <Text as="h1">
+      <Text as="a">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi hic nobis,
         maiores harum eius reprehenderit commodi tempora officiis? Nemo
         blanditiis voluptate inventore soluta corporis possimus commodi

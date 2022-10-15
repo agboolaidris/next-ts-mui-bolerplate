@@ -6,7 +6,6 @@ import StoreProvider from '../store';
 import { SnackbarProvider } from 'notistack';
 import ThemeWrapper from '../assets/theme';
 import '../assets/css/app.css';
-import SEO from '../ui/molecules/seo';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -22,7 +21,6 @@ export default function MyApp(props: MyAppProps) {
     <StoreProvider>
       <CacheProvider value={emotionCache}>
         <ThemeWrapper>
-          <SEO />
           <SnackbarProvider
             autoHideDuration={6000}
             anchorOrigin={{ horizontal: 'right', vertical: 'top' }}

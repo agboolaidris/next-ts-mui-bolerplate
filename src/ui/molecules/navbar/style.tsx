@@ -50,12 +50,6 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     margin-left: 50px;
     width: max-content;
     text-align: center;
-    a {
-      display: block;
-      &:hover {
-        color: ${({ theme }) => theme.colors.danger};
-      }
-    }
     transition: all 2s ease-in-out;
     &.active-link {
       a {
