@@ -36,7 +36,7 @@ const loadingAnimation = keyframes`
 export const Button = styled.button<{
   theme?: Theme;
   width?: string;
-  loading: boolean;
+  loading?: Boolean;
 }>`
   background-color: ${({ theme }) => theme.colors.white};
   height: 50px;

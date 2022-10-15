@@ -1,5 +1,6 @@
 import { Theme, SxProps } from '@mui/material';
 import React from 'react';
+import { Text } from '../../atoms/text';
 import { TextInputStyled } from './style';
 interface Props {
   sx?: SxProps<Theme>;
@@ -18,7 +19,11 @@ function TextInput({ sx, placeholder, onChange, name, value, error }: Props) {
         value={value}
         name={name}
       />
-      <p>{error}</p>
+      {error && (
+        <Text as="figcaption" color="danger">
+          {error}
+        </Text>
+      )}
     </TextInputStyled>
   );
 }
