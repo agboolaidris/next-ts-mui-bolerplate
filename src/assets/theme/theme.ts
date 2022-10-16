@@ -25,17 +25,38 @@ export type ColorType = keyof typeof darkColors;
 
 export const darkTheme = createTheme({
   typography: {
-    fontFamily: ['Overpass Mono', ' monospace', 'sans-serif'].join(','),
+    fontFamily: ['Roboto', 'sans-serif'].join(','),
   },
-
   colors: darkColors,
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          color: darkColors.white,
+          backgroundColor: darkColors.black,
+          position: 'relative',
+        },
+      },
+    },
+  },
 });
 
 export const lightTheme = createTheme({
   typography: {
-    fontFamily: ['Overpass Mono', ' monospace', 'sans-serif'].join(','),
+    fontFamily: ['Roboto', 'sans-serif'].join(','),
   },
   colors: lightColors,
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          color: lightColors.white,
+          backgroundColor: lightColors.black,
+          position: 'relative',
+        },
+      },
+    },
+  },
 });
 
 declare module '@mui/material/styles' {

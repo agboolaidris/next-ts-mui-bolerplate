@@ -95,7 +95,7 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
       width: 100%;
       padding: 15px;
       margin-top: 20px;
-      &:first-child {
+      &:first-of-type {
         margin-top: 30px;
       }
       .underline {

@@ -10,10 +10,12 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* PWA primary color */}
+
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
+
           <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,100;1,400&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
             rel="stylesheet"
           />
         </Head>

@@ -24,10 +24,4 @@ export const TextInputStyled = styled(Box)<{ theme?: Theme; error: boolean }>`
       border: 2px solid ${({ theme }) => theme.colors.darkWhite};
     }
   }
-  p {
-    font-size: 12px;
-    margin-block-start: 0 !important;
-    margin-block-end: 0 !important;
-    color: ${({ theme }) => theme.colors.danger};
-  }
 `;
