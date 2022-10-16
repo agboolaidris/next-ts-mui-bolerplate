@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import NextLink, { LinkProps } from 'next/link';
+import { Text } from '../../atoms/text';
 interface Props extends LinkProps {
   children: ReactNode;
   className?: string;
@@ -7,7 +8,9 @@ interface Props extends LinkProps {
 function Link({ href, className, children, ...props }: Props) {
   return (
     <NextLink href={href} {...props}>
-      <a className={className}>{children}</a>
+      <Text as="a" color="danger" hover="danger" className={className}>
+        {children}
+      </Text>
     </NextLink>
   );
 }

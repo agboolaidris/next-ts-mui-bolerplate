@@ -7,7 +7,6 @@ import Layout from '../layout';
 import { Button } from '../ui/atoms/button';
 import TextArea from '../ui/molecules/textArea';
 import TextInput from '../ui/molecules/textInput';
-import SEO from '../ui/molecules/seo';
 
 function About() {
   const initialState = { name: '', email: '', message: '' };
@@ -41,31 +40,10 @@ function About() {
     }
 
     setloading(true);
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAIL_SERVICE_KEY || '',
-        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_KEY || '',
-        state,
-        process.env.NEXT_PUBLIC_EMAIL_SECRET_KEY
-      )
-      .then(
-        () => {
-          setloading(false);
-          enqueueSnackbar(' message sent successfully!', {
-            variant: 'success',
-          });
-          setState(initialState);
-        },
-        (err) => {
-          setloading(false);
-          enqueueSnackbar(err.text, { variant: 'error' });
-        }
-      );
   };
 
   return (
     <Layout>
-      <SEO title="Contact | Agboola Idris" />
       <Box sx={{ width: '600px', maxWidth: '100%' }}>
         <TextInput
           placeholder="Name"

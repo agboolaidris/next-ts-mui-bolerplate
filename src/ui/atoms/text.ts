@@ -3,10 +3,20 @@ import styled from '@emotion/styled';
 import { Theme } from '@mui/material';
 import { ColorType } from '../../assets/theme/theme';
 
-export const Text = styled.p<{ color?: ColorType; theme?: Theme }>`
+export const Text = styled.p<{
+  color?: ColorType;
+  theme?: Theme;
+  hover?: ColorType;
+}>`
   font-weight: 400;
   line-height: 1.5;
   color: ${({ theme, color }) => theme.colors[color || 'white']};
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: ${({ theme, hover }) => hover && theme.colors[hover]};
+  }
+
   ${({ as }) =>
     as === 'h1' &&
     css`
@@ -49,5 +59,13 @@ export const Text = styled.p<{ color?: ColorType; theme?: Theme }>`
     as === 'figcaption' &&
     css`
       font-size: 0.8rem;
+      text-decoration: none;
+    `};
+
+  ${({ as }) =>
+    as === 'a' &&
+    css`
+      text-decoration: none;
+      cursor: pointer;
     `};
 `;

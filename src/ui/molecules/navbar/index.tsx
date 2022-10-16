@@ -7,16 +7,20 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import { useGlobalDispatch } from '../../../store';
 import { MODETYPE } from '../../../store/reducers/mode';
 import { InavItem } from '../../../interface/nav';
+import { Text } from '../../atoms/text';
 
 interface LinkProps2 extends LinkProps {
   children: ReactNode;
 }
+
 function CustomLink({ children, href, ...props }: LinkProps2) {
   const router = useRouter();
   return (
     <div className={router.pathname === href ? 'active-link link' : 'link'}>
       <Link href={href} {...props}>
-        {children}
+        <Text as="a" color="white" hover="danger">
+          {children}
+        </Text>
       </Link>
       <div className="underline"></div>
     </div>
