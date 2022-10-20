@@ -18,7 +18,7 @@ function CustomLink({ children, href, ...props }: LinkProps2) {
   return (
     <div className={router.pathname === href ? 'active-link link' : 'link'}>
       <Link href={href} {...props}>
-        <Text as="a" color="white" hover="danger">
+        <Text as="a" color="accent" hover="compliment">
           {children}
         </Text>
       </Link>

@@ -11,16 +11,16 @@ export const TextInputStyled = styled(Box)<{ theme?: Theme; error: boolean }>`
     background: transparent;
     outline: none;
     border: none;
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.accent50};
     display: block;
     border: 2px solid
       ${({ theme, error }) =>
-        error ? theme.colors.danger : theme.colors.lightBlack};
+        error ? theme.colors.compliment : theme.colors.accent50};
     padding: 10px;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
     &:focus {
-      border: 2px solid ${({ theme }) => theme.colors.darkWhite};
+      border: 2px solid ${({ theme }) => theme.colors.accent50};
     }
   }
 `;

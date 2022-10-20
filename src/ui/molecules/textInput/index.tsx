@@ -20,7 +20,7 @@ function TextInput({ sx, placeholder, onChange, name, value, error }: Props) {
         name={name}
       />
       {error && (
-        <Text as="figcaption" color="danger">
+        <Text as="figcaption" color="compliment">
           {error}
         </Text>
       )}

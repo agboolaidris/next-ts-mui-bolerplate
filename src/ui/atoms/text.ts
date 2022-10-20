@@ -10,7 +10,8 @@ export const Text = styled.p<{
 }>`
   font-weight: 400;
   line-height: 1.5;
-  color: ${({ theme, color }) => theme.colors[color || 'white']};
+  font-size: 1rem;
+  color: ${({ theme, color }) => theme.colors[color || 'accent50']};
   transition: all 0.3s ease-in-out;
 
   &:hover {

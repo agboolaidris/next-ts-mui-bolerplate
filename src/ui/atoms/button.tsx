@@ -1,6 +1,7 @@
 import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Theme } from '@mui/material';
+import { unstable_styleFunctionSx, SxProps } from '@mui/system';
 
 const loadingAnimation = keyframes`
   0% {
@@ -37,8 +38,9 @@ export const Button = styled.button<{
   theme?: Theme;
   width?: string;
   loading?: Boolean;
+  sx?: SxProps;
 }>`
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.compliment};
   height: 50px;
   border: none;
   border-radius: 5px;
@@ -46,25 +48,24 @@ export const Button = styled.button<{
   outline: none;
   position: relative;
   overflow-x: hidden;
+
   z-index: 1;
   transition: all 0.3s ease-in-out;
-  color: ${({ theme }) => theme.colors.black};
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.darkWhite};
-  }
+  color: ${({ theme }) => theme.colors.accent};
+
   ${({ loading, theme }) =>
     loading &&
     css`
       cursor: not-allowed !important;
 
       &:hover {
-        background-color: ${theme.colors.white};
+        background-color: ${theme.colors.compliment};
       }
       &::before {
         content: '';
         width: 0%;
         height: 100%;
-        background-color: ${theme.colors.darkWhite};
+        background-color: ${theme.colors.accent};
         display: block;
         position: absolute;
         top: 0;
