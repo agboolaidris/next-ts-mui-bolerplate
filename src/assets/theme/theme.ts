@@ -1,21 +1,20 @@
 import { createTheme } from '@mui/material/styles';
+import { TypographyOptions } from '@mui/material/styles/createTypography';
 
 export const darkColors = {
-  danger: '#B30049',
-  white: '#f9f9f9',
-  black: '#070D0D',
-  lightBlack: '#231F20 ',
-  yellow: '#fff800',
-  darkWhite: '#E1D9D1',
+  dominant: '#000205',
+  dominant50: '#303133',
+  accent: '#F6F8FA',
+  accent50: '#F4FAFF',
+  compliment: '#78FAC6',
 };
 
 export const lightColors = {
-  danger: '#B30049',
-  black: '#f9f9f9',
-  white: '#070D0D',
-  lightBlack: '#E1D9D1',
-  yellow: '#fff800',
-  darkWhite: '#231F20 ',
+  dominant: '#FFFDFA',
+  dominant50: '#F1EFEC',
+  accent: '#110F0C',
+  accent50: '#31302E',
+  compliment: '#BCA987',
 };
 
 export type ColorsInterface = typeof darkColors;
@@ -23,17 +22,19 @@ export type ColorsInterface = typeof darkColors;
 // 👇️ type Keys = "name" | "age" | "country"
 export type ColorType = keyof typeof darkColors;
 
+const typography: TypographyOptions = {
+  fontFamily: ['Roboto', 'sans-serif'].join(','),
+};
+
 export const darkTheme = createTheme({
-  typography: {
-    fontFamily: ['Roboto', 'sans-serif'].join(','),
-  },
+  typography,
   colors: darkColors,
   components: {
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          color: darkColors.white,
-          backgroundColor: darkColors.black,
+          color: darkColors.accent50,
+          backgroundColor: darkColors.dominant,
           position: 'relative',
         },
       },
@@ -42,16 +43,14 @@ export const darkTheme = createTheme({
 });
 
 export const lightTheme = createTheme({
-  typography: {
-    fontFamily: ['Roboto', 'sans-serif'].join(','),
-  },
+  typography,
   colors: lightColors,
   components: {
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          color: lightColors.white,
-          backgroundColor: lightColors.black,
+          color: lightColors.accent50,
+          backgroundColor: lightColors.dominant,
           position: 'relative',
         },
       },

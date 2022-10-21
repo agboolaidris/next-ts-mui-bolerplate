@@ -4,7 +4,6 @@ import { Box, Theme } from '@mui/material';
 
 export const HeaderStyled = styled(Box)<{ theme?: Theme }>`
   height: 100px;
-  width: 100%;
   padding: 0 min(5%, 100px);
   display: flex;
   justify-content: space-between;
@@ -20,11 +19,12 @@ export const Logo = styled.a<{ theme?: Theme }>`
   ${({ theme }) =>
     true &&
     css`
-      color: ${theme.colors.lightBlack};
-      text-shadow: 0 0 5px ${theme.colors.white}, 0 0 10px ${theme.colors.white},
-        0 0 15px ${theme.colors.white}, 0 0 20px ${theme.colors.white},
-        0 0 30px ${theme.colors.white}, 0 0 40px ${theme.colors.white},
-        0 0 55px ${theme.colors.white}, 0 0 75px ${theme.colors.white};
+      color: ${theme.colors.dominant50};
+      text-shadow: 0 0 5px ${theme.colors.accent50},
+        0 0 10px ${theme.colors.accent50}, 0 0 15px ${theme.colors.accent50},
+        0 0 20px ${theme.colors.accent50}, 0 0 30px ${theme.colors.accent50},
+        0 0 40px ${theme.colors.accent50}, 0 0 55px ${theme.colors.accent50},
+        0 0 75px ${theme.colors.accent50};
     `}
 `;
 
@@ -53,12 +53,12 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     transition: all 2s ease-in-out;
     &.active-link {
       a {
-        color: ${({ theme }) => theme.colors.danger};
+        color: ${({ theme }) => theme.colors.compliment};
       }
       .underline {
         width: 100%;
         height: 1px;
-        background: ${({ theme }) => theme.colors.danger};
+        background: ${({ theme }) => theme.colors.compliment};
       }
     }
   }
@@ -67,7 +67,7 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     position: fixed;
     width: 100%;
     z-index: 40;
-    background: ${({ theme }) => theme.colors.black};
+    background: ${({ theme }) => theme.colors.dominant};
     left: 0;
     top: 0;
     margin-block-start: 0em !important;
@@ -102,7 +102,7 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
       }
       &.active-link {
         a {
-          color: ${({ theme }) => theme.colors.danger};
+          color: ${({ theme }) => theme.colors.compliment};
         }
       }
     }

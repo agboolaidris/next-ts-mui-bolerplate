@@ -8,7 +8,7 @@ interface Props extends LinkProps {
 function Link({ href, className, children, ...props }: Props) {
   return (
     <NextLink href={href} {...props}>
-      <Text as="a" color="danger" hover="danger" className={className}>
+      <Text as="a" color="accent" hover="accent50" className={className}>
         {children}
       </Text>
     </NextLink>

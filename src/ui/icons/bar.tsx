@@ -11,7 +11,7 @@ const BarStyled = styled.div<{ theme?: Theme }>`
   span {
     width: 25px;
     height: 2px;
-    background: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.accent50};
     &:last-of-type {
       width: 15px;
     }

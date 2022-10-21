@@ -13,15 +13,15 @@ export const TextInputStyled = styled(Box)<{ theme?: Theme; error: boolean }>`
     background: transparent;
     outline: none;
     border: none;
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.accent50};
     resize: none;
     height: 200px;
     border: 2px solid
       ${({ theme, error }) =>
-        error ? theme.colors.danger : theme.colors.lightBlack};
+        error ? theme.colors.compliment : theme.colors.accent50};
     border-radius: 5px;
     &:focus {
-      border: 2px solid ${({ theme }) => theme.colors.darkWhite};
+      border: 2px solid ${({ theme }) => theme.colors.accent50};
     }
   }
 `;

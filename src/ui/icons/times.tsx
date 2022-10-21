@@ -12,7 +12,7 @@ const TimesStyled = styled.div<{ theme?: Theme }>`
     width: 25px;
     height: 2px;
     position: absolute;
-    background: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.accent};
     top: 50%;
     transform: translateY(-50%);
     &:last-of-type {
